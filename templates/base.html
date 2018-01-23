@@ -1,0 +1,19 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Base template!</title>
+    <link href="https://unpkg.com/normalize.css@^4.1.1" rel="stylesheet" />
+    <link href="https://unpkg.com/@blueprintjs/core@^1.11.0/dist/blueprint.css" rel="stylesheet" />
+  </head>
+  <body>
+  {# Pass data to React through the window object #}
+  {#  <script>  #}
+  {#      window.some_stuff = {{ some_stuff|safe }};  #}
+  {#  </script>  #}
+    <div id="react">
+    {% render_bundle 'main' %}
+    </div>
+  </body>
+</html>
